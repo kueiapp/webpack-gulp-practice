@@ -4,12 +4,13 @@ module.exports = {
 	// all settings
 
 	// 撰寫中的高版本JS程式
-  entry: './src/main.js', 
+  entry: ['./src/scripts_es6/main.js','./src/scripts_es6/db.js'], 
   
   // 輸出的檔案位置
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'main.compiled.js',
+ output: {
+    path: path.join(__dirname, './src/scripts_es5'),
+    filename: '[name].bundle.js',
+    libraryTarget: 'commonjs2',
   },
 
   // loader的模組，例如 Babel
