@@ -64,4 +64,5 @@ gulp.task('sass:watch', function () {
   gulp.watch('./src/styles/**/*.scss', ['sass']);
 });
 
+// run all tasks once
 // gulp.task('run-all',["hello","minify"]);
